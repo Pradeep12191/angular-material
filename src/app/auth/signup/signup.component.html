@@ -1,0 +1,38 @@
+<section class="signup-form container">
+  <form [formGroup]="signupForm" (ngSubmit)="onFormSubmit(signupForm.value)" 
+    fxLayout="column" 
+    fxLayoutGap="10px"
+    fxLayoutAlign="center center">
+    <mat-form-field hintLabel="Enter your email">
+        <input 
+          formControlName="email" 
+          type="email"
+          required
+          matInput 
+          placeholder="Your email">
+        <mat-error *ngIf="email.invalid">{{getMessage()}}</mat-error>
+    </mat-form-field>
+    <mat-form-field hintLabel="Should be atleast 6 characters long.">
+        <input 
+          type="password"
+          formControlName="password"
+          required
+          matInput
+          placeholder="Your password">
+        <mat-hint align="end">{{password.value?.length}}/6</mat-hint>
+        <mat-error>Has to be atleast 6 characters long.</mat-error>
+    </mat-form-field>
+    <mat-form-field>
+      <input 
+        formControlName="birthDate"
+        required
+        matInput 
+        [matDatepicker]="picker" 
+        placeholder="Your birthdate">
+      <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+      <mat-datepicker #picker></mat-datepicker>
+    </mat-form-field>
+    <mat-checkbox formControlName="agree" color="primary" >Agreed to Terms and Conditions.</mat-checkbox>
+    <button [disabled]="signupForm.invalid" type="submit" mat-raised-button color="primary">Submit</button>
+  </form>
+</section>

@@ -1,0 +1,23 @@
+.box{
+    height: 100%;
+    border: solid black 1px;
+}
+
+.container{
+    border: solid black 1px;
+    height: 500px;
+}
+
+.nav{
+    height: 100%;
+    /* background-color: red; */
+}
+
+.content{
+    height: 100%;
+    /* background-color: green; */
+}
+
+.welcome{
+    text-align: center;
+}

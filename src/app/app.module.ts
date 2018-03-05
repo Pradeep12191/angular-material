@@ -10,12 +10,10 @@ import { AppComponent } from './app.component';
 import { MaterialModule } from './material.module';
 import { LoginComponent } from './auth/login/login.component';
 import { SignupComponent } from './auth/signup/signup.component';
-import { TrainingComponent } from './training/training.component';
-import { PastTrainingsComponent } from './training/past-trainings/past-trainings.component';
-import { CurrentTrainingComponent } from './training/current-training/current-training.component';
-import { NewTrainingComponent } from './training/new-training/new-training.component';
 import { WelcomeComponent } from './welcome/welcome.component';
 import { AppRoutingModule } from './app-routing.module';
+import { HeaderComponent } from './navigation/header/header.component';
+import { NavListComponent } from './navigation/nav-list/nav-list.component';
 
 
 @NgModule({
@@ -23,11 +21,9 @@ import { AppRoutingModule } from './app-routing.module';
     AppComponent,
     LoginComponent,
     SignupComponent,
-    TrainingComponent,
-    PastTrainingsComponent,
-    CurrentTrainingComponent,
-    NewTrainingComponent,
-    WelcomeComponent
+    WelcomeComponent,
+    HeaderComponent,
+    NavListComponent
   ],
   imports: [
     BrowserModule,

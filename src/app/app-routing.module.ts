@@ -10,7 +10,7 @@ const routes: Routes = [
     { path: '', component: WelcomeComponent, pathMatch: 'full' },
     { path: 'login', component: LoginComponent },
     { path: 'signup', component: SignupComponent },
-    { path: 'training', component: TrainingComponent }
+    { path: 'training', loadChildren:'./training/training.module#TrainingModule' }
 ];
 
 @NgModule({

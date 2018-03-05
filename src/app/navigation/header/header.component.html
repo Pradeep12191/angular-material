@@ -1,0 +1,17 @@
+<mat-toolbar color="primary">
+  <div>
+    <button fxHide.gt-sm mat-icon-button (click)="toggleBtnClick()">
+      <mat-icon aria-label="menu">menu</mat-icon>
+    </button>
+  </div>
+  <div>
+    <h1>
+      <a routerLink="/" mat-button>TRAINING</a>
+    </h1>
+  </div>
+  <div fxHide.lt-sm fxFlex fxLayout fxLayoutAlign="flex-end">
+    <a routerLink="/login" mat-button>Login</a>
+    <a routerLink="/signup" mat-button>Sigup</a>
+    <a routerLink="/training" mat-button>Training</a>
+  </div>
+</mat-toolbar>
